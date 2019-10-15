@@ -12,4 +12,4 @@ RUN ./bin/x64/factorio --create /data/factorio_save.zip --map-gen-settings ./dat
 
 EXPOSE 34197
 
-CMD ./bin/x64/factorio --start-server /data/factorio_save.zip
+CMD ./bin/x64/factorio --start-server /data/factorio_save.zip --server-settings ./data/server-settings.json
