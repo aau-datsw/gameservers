@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  factorio:
+    image: factoriotools/factorio:1.0.0
+    ports:
+     - "34197:34197/udp"
+     - "27015:27015/tcp"
+    volumes:
+     - /opt/factorio:/factorio
+#    environment:
+#      - PUID=1000
+#      - PGID=1000
+#      - UPDATE_MODS_ON_START=true
+#      - USERNAME=FactorioUsername
+#      - TOKEN=FactorioToken
+#      - PORT=34198
