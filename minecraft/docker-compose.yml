@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    environment:
+      - EULA=TRUE
+      - TZ=Europe/Copenhagen
+    ports:
+      - 25565:25565
+    volumes:
+      - /opt/minecraft:/data
+  skyfactory:
+    image: itzg/minecraft-server
+    environment:
+      - EULA=TRUE
+      - TYPE=FTBA
+      - FTB_MODPACK_ID=25  # https://www.feed-the-beast.com/modpack/ftb_presents_skyfactory_3
+      - TZ=Europe/Copenhagen
+    ports:
+      - 25565:25565
+    volumes:
+      - /opt/skyfactory:/data
